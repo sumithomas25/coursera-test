@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="course.js"></script>
+    <link href="filter.css" rel="stylesheet">
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+   <h2>MENU INFORMATION</h2>
+    <table cellpadding="2" cellspacing="2" border="1" allign="center">
+        <tr>
+            <th>Index</th>
+            <th>MENU ID</th>
+            <th> NAME</th>
+            <th>PRICE</th>
+            <th>OPTIONS</th>
+        </tr>
+        <tr ng-repeat="course in listCourses">
+            <td>{{$index}}</td>
+            <td>{{course.id}}</td>
+            <td>{{course.name}}</td>
+            <td>{{course.price | currency:"&#8377;":0}}</td>
+            <td>
+                <a href="#" ng-click="delete()">Delete</a> |
+                <a href="#" ng-click="edit(course.id)">Edit</a>
+            </td>
+        </tr>
+    </table>
+    <h2>MENU Addition/Modification</h2>
+   
+    <table cellpadding="2" cellspacing="2">
+        <tr>
+            <td>MENU ID</td>
+            <td><input type="text" ng-model="id"></td>
+        </tr>
+        <tr>
+            <td>NAME</td>
+            <td><input type="text" ng-model="name"></td>
+        </tr>
+        <tr>
+            <td>PRICE</td>
+            <td><input type="text" ng-model="price"></td>
+        </tr>
+        
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="button" value="ADD" ng-click="add()">
+            <input type="button" value="SAVE" ng-click="save()"></td>
+        </tr>
+    </table>
+    
+</body>
+</html>

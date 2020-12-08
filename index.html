@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html ng-app="myApp"> 
+  <head ang="en"> 
+      <!--import the angularjs libraries--> 
+      <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"> 
+    </script> 
+      <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"> 
+    </script> 
+
+	<title>MENU</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+    table,
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    
+div.scrollmenu {
+background-color: #333;
+overflow: auto;
+white-space: nowrap;
+}
+div.scrollmenu a {
+display: inline-block;
+color: white;
+text-align: center;
+padding: 14px;
+text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+background-color: #777;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+  </style>
+</head>
+<body bgcolor=#800000>
+  <a  id="second"></a>
+  <img alt="link" src="images/logo.png"
+  width="150" height="70" alt="#" />  </a>
+<img src="images/b3.jpg" alt="COFFEE" align="center" width="1350" height="100">    
+<header>
+<h3 align="center">
+ <font face="espresso" size="7" color="#ffffff"><ew>MENU</ew></font>
+</header>   
+   <font face="cinzel" size="4">
+     <div class="scrollmenu">
+ <a  id="loadbackcontent" href="#/">Home</a>
+  <a href="menu.html">Menu</a>
+   <a href="gallery.html">Gallery </a>
+<a href="#/second">About</a>
+<a href="contactus.html">Contact us</a>
+<a href="reg.html">Registration</a>
+</div>
+   </font>
+ </h3>
+
+
+  <div ng-view></div>
+      
+
+  <script>
+   
+    var app = angular.module('myApp', []); 
+    var app = angular.module('myApp', ['ngRoute']); 
+    app.config(function($routeProvider) { 
+    $routeProvider 
+    .when('/', { 
+    templateUrl : 'index11.html', 
+    controller : 'FirstController'
+    }) 
+    
+  
+    .when('/second', { 
+    templateUrl : 'about.html', 
+    controller : 'SecondController'
+    }) 
+  
+    .when('/third', { 
+    templateUrl : 'third.html', 
+    controller : 'ThirdController'
+    }) 
+    
+    .otherwise({redirectTo: '/'}); 
+    }); 
+    
+     
+    
+    app.controller('FirstController', function($scope) { 
+    document.getElementById("menuremove").setAttribute("hidden", false); 
+    }); 
+    
+    app.controller('SecondController', function($scope) { 
+    
+    document.getElementById("menuremove").setAttribute("hidden", true);
+    }); 
+    
+    app.controller('ThirdController', function($scope) { 
+    
+    }); 
+    </script> 
+    
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

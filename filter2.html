@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="filter_app.js"></script>
+   
+    <style>
+        body {
+       background-color: rgba(15, 1, 1, 0.993);
+       color:rgba(231, 52, 28, 0.966);
+       
+   
+   }
+   
+   h1,p{
+     text-align:center;
+   }
+   table,th,td {
+     border : 1px solid rgb(83, 6, 226);
+     border-collapse: collapse;
+      margin-left: auto;
+     margin-right: auto;
+   }
+   th,td {
+     font-size:larger;
+                   padding:20px;
+                   text-align:center !important;
+   }
+   
+   </style>
+</head>
+<body ng-app="MyApp">
+    <h1>DISPLAY MENU DETAILS</h1>
+    <div ng-controller="MyCtrl">
+        Rows to Display:<input type="number" step="1" min="0" max="4" ng-model="rowlimit" />
+        <br \>
+        <br \>
+
+        Search:<input type="text" placeholder="Seach Menu" ng-model="Search" />
+        <br \>
+        <br \>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+              
+                <th>DISCRIPTION</th>
+             
+                <th>PRICE(currency)</th>
+            </tr>
+            <tbody>
+                <tr ng-repeat="menu in menu | limitTo:rowlimit |filter:Search| orderBy:'price' ">
+                    <td>{{menu.id | number:0}}</td>
+                    <td>{{menu.name | uppercase}}</td>
+                   
+                    <td>{{menu.discription | lowercase}}</td>
+                   
+                    <td> {{menu.price | currency:"&#8377;":0 }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+</body>
+</html>

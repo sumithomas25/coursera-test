@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html ng-app="myApp"> 
+  <head ang="en"> 
+      <!--import the angularjs libraries--> 
+      <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"> 
+    </script> 
+      <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"> 
+    </script> 
+
+	<title>MENU</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+      table,
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+    </style>
+</head>
+<body bgcolor=#800000>
+ 
+      
+
+    
+
+          
+	<table class="blueTable" align="center" style="width:80%">
+	
+  <tr style="background-color:#ff6600">
+    <th id="name">ITEM NAME</th>
+    <th id="discription">DISCRIPTION</th> 
+    <th id="price">PRICE</th>
+  </tr>
+
+ <tr>
+    <td style="text-align:center; "><font size="3" face="Tahoma"><strong>CAPPUCCINO</strong></font></td>
+    <td  style="text-align:center; "><font color=#0000ff size="3" face="Comic Sans MS"><strong>A double shot of espresso with equal parts steamed milk and foam</strong></font></td>
+    <td>$50</td>
+  </tr>
+   <tr>
+    <td style="text-align:center; "><font size="3" face="Tahoma"><strong>LATTE</strong></font></td>
+    <td  style="text-align:center; "><font color=#0000ff size="3" face="Comic Sans MS"><strong>a double shot of espresso with steamed milk and a small layer of foam</strong></font></td>
+    <td>$60</td>
+  </tr>
+
+  <tr>
+    <td style="text-align:center; "><font size="3" face="Tahoma"><strong>SHORT MACCHIATO</strong></font></td>
+    <td  style="text-align:center; "><font color=#0000ff size="3" face="Comic Sans MS"><strong>a single serving of espresso, stained with milky foam</strong></font></td>
+    <td>$40</td>
+  </tr>
+  <tr>
+    <td style="text-align:center; "><font size="3" face="Tahoma"><strong>AFFOGATO</strong></font></td>
+    <td  style="text-align:center; "><font color=#0000ff size="3" face="Comic Sans MS"><strong>a single shot of espresso served with one scoop of vanilla ice-cream</strong></font></td>
+    <td>$30</td>
+  </tr>
+    <tr>
+    <td style="text-align:center; "><font size="3" face="Tahoma"><strong>BEAN BAR LATTE</strong></font></td>
+    <td  style="text-align:center; "><font color=#0000ff size="3" face="Comic Sans MS"><strong>a double shot of espresso with steamed milk a small layer of foam and a special sweetened coffee flavoured syrup</strong></font></td>
+    <td>$60</td>
+  </tr>
+  <tr>
+    <td style="text-align:center; "><font size="3" face="Tahoma"><strong>CHOC MOCHA</strong></font></td>
+    <td  style="text-align:center; "><font color=#0000ff size="3" face="Comic Sans MS"><strong>rich chocolate mixed with a double shot of espresso.Served with steamed milk and a small layer of foam</strong></font></td>
+    <td>$70</td>
+  </tr>
+
+  <tr>
+    <td style="text-align:center; "><font size="3" face="Tahoma"><strong>CHAI LATTE</strong></font></td>
+    <td  style="text-align:center; "><font color=#0000ff size="3" face="Comic Sans MS"><strong>chai syrup with steamed milk and a small layer of foam</strong></font></td>
+    <td>$55</td>
+</tr>
+
+    <tr>
+    <td style="text-align:center; "><font size="3" face="Tahoma"><strong>VIENNA</strong></font></td>
+    <td  style="text-align:center; "><font color=#0000ff size="3" face="Comic Sans MS"><strong>a long black, topped with whipped cream</strong></font></td>
+    <td>$60</td>
+  </tr>
+
+    <tr>
+    <td style="text-align:center; "><font size="3" face="Tahoma"><strong>CHOC VIENNA</strong></font></td>
+    <td  style="text-align:center; "><font color=#0000ff size="3" face="Comic Sans MS"><strong>a hot chocolate, topped with whipped cream</strong></font></td>
+    <td>$70</td>
+  </tr>
+
+  <tr>
+    <td style="text-align:center; "><font size="3" face="Tahoma"><strong>LONG BLACK</strong></font></td>
+    <td  style="text-align:center; "><font color=#0000ff size="3" face="Comic Sans MS"><strong>a cup of hot water topped with a double shot of espresso</strong></font></td>
+    <td>$30</td>
+  </tr>
+
+ <tr>
+    <td style="text-align:center; "><font size="3" face="Tahoma"><strong>HOT CHOCOLATE</strong></font></td>
+    <td  style="text-align:center; "><font color=#0000ff size="3" face="Comic Sans MS"><strong>rich chocolate with steamed milk and a small layer of foam
+</strong></font></td>
+    <td>$50</td>
+  </tr>
+
+  <tr>
+    <td style="text-align:center; "><font size="3" face="Tahoma"><strong>LONG MACCHIATO</strong></font></td>
+    <td  style="text-align:center; "><font color=#0000ff size="3" face="Comic Sans MS"><strong>a double shot of espresso, stained with milky foam</strong></font></td>
+    <td>$45</td>
+  </tr>
+
+  <tr>
+    <td style="text-align:center; "><font size="3" face="Tahoma"><strong>PICCOLO LATTE</strong></font></td>
+    <td  style="text-align:center; "><font color=#0000ff size="3" face="Comic Sans MS"><strong>a single shot of espresso with a small layer of foam</strong></font></td>
+    <td>$55</td>
+  </tr>
+  </table>
+  
+  <div class="row">
+  <div class="column">
+    <img src="images/b4.jpg" alt="coffee" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/b5.jpg" alt="coffee" style="width:100%">
+  </div>
+  </div>
+
+
+
+ 
+    
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
